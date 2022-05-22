@@ -1,13 +1,17 @@
 import { Outlet } from 'react-router-dom';
-import Menu from '../Menu'
+import Menu from '../Menu';
+import Header from '../Header';
+import { DashboardContainer } from './style'
 
 function Layout(){
     return(
-        <div>
-            <h1>Layout</h1>
+        <DashboardContainer>
+            <Header />
             <Menu />
-            <Outlet />
-        </div>
+            <div className='content'>
+                <Outlet />
+            </div>
+        </DashboardContainer>
     )
 }
 
